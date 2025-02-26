@@ -1,0 +1,792 @@
+/* Geral  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .interface {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  /* Cabeçalho  */
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  }
+  
+  header .menu {
+    font-size: 22px;
+  }
+  
+  header {
+    padding: 40px 4%;
+    transition: opacity .2s ease;
+    position: sticky;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
+  header >.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  header a {
+    color: #a7a0a0;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+  }
+  
+  header a:hover {
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  header nav ul {
+    list-style-type: none;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+  }
+  
+  header .yg-contato {
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+  
+  header .interface .yg-contato {
+    padding: 0;
+    margin: 0;
+  }
+  
+  header .yg-contato .custom-select {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1cb5ed;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 205px;
+    z-index: 5;
+    text-align: left;
+  }
+  
+  header .yg-contato .custom-select .select-selected {
+    padding: 10px 20px;
+    color: white;
+    background-color: #1cb5ed;
+    border-radius: 30px;
+    text-align: left;
+    position: relative;
+    display: block;
+  }
+  
+  header .yg-contato .custom-select .select-selected:after {
+    content: '▼';
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    transition: transform 0.3s ease, content 0.3s ease;
+  }
+  
+  header .yg-contato .custom-select .select-items {
+    display: none;
+    position: absolute;
+    background-color: #1cb5ed;
+    width: 100%;
+    z-index: 9999;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  header .yg-contato .custom-select .select-items .select-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: #1cb5ed;
+    border-bottom: 1px solid #10617f;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  header .yg-contato .custom-select .select-items .select-item:hover {
+    background-color: #10617f;
+    transform: scale(1.05);
+  }
+  
+  header .yg-contato .custom-select .select-items.show {
+    display: block;
+  }
+  
+  header .yg-contato .custom-select .select-selected.open:after {
+    content: '▲';
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  
+  /* topo  */
+  
+  section.topo {
+    padding: 40px 20px 4%;
+  }
+  
+  .topo {
+    color: white;
+  }
+  
+  .topo .txt-topo h1 {
+    font-size: 40px;
+  }
+  
+  .topo span {
+    color: #1cb5ed;
+  }
+  
+  .topo .txt-topo p {
+    font-size: 30px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+  
+  .yago {
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    box-shadow: 5px 5px 10px #1cb5ed;
+  }
+  
+  section.topo .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  .topo .img-topo img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes flutuar {
+    0% {
+      top: 0;
+    }
+  
+    100% {
+      top: 20px;
+    }
+  }
+  
+  /* Especialidades  */
+  .especialidades h2 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .especialidades .objetivos {
+    font-size: 30px;
+  }
+  
+  .especialidades span {
+    color: #1cb5ed;
+  }
+  
+  .especialidades span.si {
+    text-decoration: underline;
+  }
+  
+  .table-box {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+  }
+  
+  .especialidades ul {
+    margin-left: 20px;
+    color: #fff;
+    list-style: circle;
+  }
+  
+  .especialidades li {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  table {
+    color: white;
+    border: solid 3px white;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+    transition: .2s;
+  }
+  
+  table:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px #10617f;
+  }
+  
+  th,
+  td {
+    border: solid 1.8px lightgray;
+    width: 230px;
+    height: 40px;
+  }
+  
+  .linha-um {
+    font-size: 23px;
+    color: #688ab6;
+    border-left: solid 3px #1cb5ed;
+    border-right: solid 3px #1cb5ed;
+    border-top: solid 3px #1cb5ed;
+  }
+  
+  .coluna-um {
+    font-size: 19px;
+    border-left: solid 3px #1cb5ed;
+  }
+  
+  .coluna-quatro {
+    border-right: solid 3px #1cb5ed;
+  }
+  
+  .linha-seis {
+    border-bottom: solid 3px #1cb5ed;
+  }
+  
+  
+  
+  /* sobre  */
+  section.sobre {
+    padding: 80px 4%;
+  }
+  
+  section.sobre .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  .sobre img {
+    width: 350px;
+    height: 450px;
+    border-radius: 50px;
+  }
+  
+  .sobre {
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .sobre .txt-sobre h1 {
+    font-size: 40px;
+  }
+  
+  .sobre .txt-sobre p {
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top: 30px;
+    text-align: justify;
+  }
+  
+  .txt-sobre span {
+    color: #1cb5ed;
+    margin-left: 25px;
+  }
+  
+  
+  .sobre .txt-sobre .yg-social button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px #10617f;
+  }
+  
+  /* projetos  */
+  section.projetos {
+    padding: 40px 4%;
+    color: white;
+  }
+  
+  
+  
+  .projetos .img-cracha, .img-tde {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes flutuar {
+    0% {
+      top: 0;
+    }
+  
+    100% {
+      top: 10px;
+    }
+  }
+  
+  .projetos h2 {
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  .projetos span {
+    color: #1cb5ed;
+  }
+  
+  section.projetos .flex {
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .img-cracha {
+    width: 450px;
+    height: 500px;
+    background-image: url(cracha.png);
+    background-position: center;
+    background-size: 450px 500px;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    position: relative;
+  }
+  
+  .img-tde {
+    width: 450px;
+    height: 500px;
+    background-image: url(Captura\ de\ tela\ 2024-05-28\ 200636.png);
+    background-position: center;
+    background-size: 450px 500px;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 40px;
+    opacity: 0;
+    transition: .5s;
+  }
+  
+  .overlay:hover {
+    opacity: 1;
+  }
+  
+  .projetos a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Formulário */
+  
+  section.formulario {
+    padding: 80px 4%;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 40px; 
+    margin-top: 40px;
+  }
+  
+  .formulario h2 {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .formulario span {
+    color: #1cb5ed;
+  }
+  
+  form {
+    max-width: 400px;
+    flex: 1;
+  }
+  
+  form input,
+  form textarea {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #00000088;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #1cb5ed;
+  }
+  
+  form input::placeholder,
+  form textarea::placeholder {
+    color: #10617f;
+  }
+  
+  form textarea {
+    resize: none;
+    height: 200px;
+    border: 2px solid #1cb5ed;
+  }
+  
+  form .yg-enviar {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  form .yg-enviar input {
+    width: 120px;
+    background-color: #1cb5ed;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+    margin-bottom: 10px;
+  }
+  
+  form .yg-enviar input:hover {
+    box-shadow: 0px 0px 8px #10617f;
+    transform: scale(1.1);
+  }
+  
+  /* Radio Buttons */
+  
+  .radios {
+    max-width: 600px; 
+    flex: 1;
+    margin: 10px;
+    justify-content: center;
+    align-items:center;
+    margin-left:40px;
+  }
+  
+  .radio-group {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    margin-top: 80px;
+    justify-content: center;
+    align-items:center;
+  }
+  
+  .radio-group li {
+    display: inline-block;
+  }
+  
+  .radio-group {
+    color: white;
+  }
+  
+  .custom-radio {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #a7a0a0;
+  }
+  
+  .custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .radio-label {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #444;
+    border-radius: 50%;
+    border: 2px solid #1cb5ed;
+  }
+  
+  .custom-radio input[type="radio"]:checked ~ .radio-label {
+    background-color: #1cb5ed;
+  }
+  
+  .radio-label::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .custom-radio input[type="radio"]:checked ~ .radio-label::after {
+    display: block;
+  }
+  
+  .custom-radio .radio-label::after {
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  /* Accordion Section */
+  .accordion-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .accordion-campos {
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .accordion-section h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .accordion-section h2 span{
+    color: #1cb5ed;
+  }
+  
+  .accordion-item {
+    margin-bottom: 20px;
+    width: 100%; 
+    max-width: 800px;
+    overflow: hidden; 
+  }
+  
+  /* Estilo do cabeçalho do Accordion */
+  
+  .accordion-header {
+    background-color: #1cb5ed;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+  }
+  
+  .accordion-header:hover {
+    background-color: #10617f;
+  }
+  
+  .accordion-arrow {
+    position: absolute; 
+    right: 20px;
+    font-size: 20px;
+    color: white; 
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  /* Estilo do conteúdo do Accordion */
+  
+  .accordion-content {
+    background-color: #687182;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .accordion-item.active .accordion-content {
+    display: block;
+  }
+  
+  .accordion-item.active .accordion-arrow {
+    transform: rotate(90deg); 
+  }
+  
+  .accordion-item.active .accordion-header {
+    background-color: #10617f;
+    text-align: left; 
+  }
+  
+  
+  
+  
+  
+  /* rodapé  */
+  
+  footer .logo-footer {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  }
+  
+  footer {
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #525252;
+  }
+  
+  footer .flex {
+    justify-content: space-between;
+  }
+  
+  footer .line-footer {
+    padding: 20px 0;
+    font-size: 22px;
+  }
+  
+  .borda {
+    border-top: 2px solid #1cb5ed;
+  }
+  
+  footer .line-footer p i {
+    color: #1cb5ed;
+    font-size: 22px;
+  }
+  
+  footer .line-footer p a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .yg-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1cb5ed;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 8px;
+    margin-left: 55px;
+    margin-top: 40px;
+    transition: .2s;
+  }
+  footer .yg-social button:hover{
+    box-shadow: 0px 0px 10px #10617f;
+    transform: scale(1.1);
+  }
+  /* responsividade */
+  
+  @media screen and (min-width:466px) and (max-width:550px){
+    *{
+      
+      justify-content: center;
+      align-items: center;
+      
+    }
+  
+    .flex{
+      flex-direction: column;
+    }
+  
+    /*header */
+  
+    header{
+      position: relative;
+    }
+    /* .menu, header .yg-contato{
+      display: none;
+    } */
+  
+  
+    /* topo */
+    .topo .flex{
+      flex-direction: column-reverse;
+    }
+    section.topo .flex {
+      gap: 50px;
+    }
+    section.topo {
+      padding: 30px  10%;
+    }
+    h1 {
+      font-size: 30px;
+    }
+     p {
+      font-size: 24px;
+    }
+    /* projetos */
+  
+    .img-tde, .img-cracha{ 
+      width: 100%;
+      max-width: 380px;
+      height: 410px;
+    }
+    section.projetos .flex {
+     gap: 30px;
+    }
+  
+    /*especialidades */
+    .table-box{
+      flex-direction: column;
+      padding: 0 8%;
+      gap:40px
+    }
+  
+    /* sobre */
+    section.sobre {
+      padding: 40px 8%;
+    }
+    section.sobre .flex {
+      gap: 40px;
+    }
+    .sobre img {
+      width: 280px;
+      height: 320px;
+      border-radius: 50px;
+    }
+  
+    /* footer */
+  
+  
+  
+    
+  }
+  
+  
